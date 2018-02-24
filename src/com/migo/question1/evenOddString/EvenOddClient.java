@@ -2,8 +2,13 @@ package com.migo.question1.evenOddString;
 
 import java.util.List;
 
+/**
+ * @author tausifakram
+ * EvenOddClient is the driver class of Question 1
+ */
 public class EvenOddClient {
 
+    // Reference of EvenOddHelperInterface, an interface is declared
     private EvenOddHelperInterface evenOddHelper;
 
     // static member and can be used by static methods
@@ -46,6 +51,9 @@ public class EvenOddClient {
 
 	for (int i = 0; i < stringArrayList.size(); i++) {
 
+	    // processInputArray method of evenOddHelper is called.
+	    // This represents abstraction since the evenOddClient does not know
+	    // what goes in when the method is called.
 	    String result = evenOddClient.evenOddHelper.processInputArray((String[]) stringArrayList.get(i));
 	    System.out.println(result);
 
